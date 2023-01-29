@@ -1,0 +1,55 @@
+﻿<title>Tic-Tac-Toe</title>
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<style>
+    table {
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 50px;
+    }
+
+    table td {
+        width: 100px;
+        height: 100px;
+    }
+
+    table tr {
+        border-bottom: 3px solid black;
+    }
+    table tr:last-child {
+        border-bottom: none;
+    }
+
+    table td {
+        border-right: 3px solid black;
+    }
+    table td:last-child {
+        border-right: none;
+    }
+</style>
+
+<script id="board-template" type="text/x-handlebars-template">
+    {{debug}}
+    <table>
+        <tbody>
+            {{#each Pieces}}
+            <tr>
+                {{#each this}}
+                <td id="pos-{{@@../index}}-{{@@index}}">{{this}}</td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<main class="container text-center">
+    <h1>Tic-Tac-Toe</h1>
+        <div class='row mb-3' id="usernameGroup">
+            <label class="sr-only control-label" for="username"></label>
+            <input type="text" class="form-control" id="username" placeholder="Username" autofocus />
+        </div>
+        <button type="submit" id="findGame" class="btn btn-primary">Find Game</button>
+        <p id="status" class="help-block">Please enter your desired username.</p>
+    <div id="board"></div>
+</main>

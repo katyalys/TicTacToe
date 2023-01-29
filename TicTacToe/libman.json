@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "signalr.js@2.4.3",
+      "destination": "wwwroot/js/signalr.js/",
+      "files": [
+        "jquery.signalR.min.js",
+        "jquery.signalR.js"
+      ]
+    },
+    {
+      "library": "handlebars.js@4.7.7",
+      "destination": "wwwroot/js/handlebars.js/",
+      "files": [
+        "handlebars.min.js",
+        "handlebars.js"
+      ]
+    },
+    {
+      "library": "microsoft-signalr@7.0.2",
+      "destination": "wwwroot/js/microsoft-signalr/",
+      "files": [
+        "signalr.min.js"
+      ]
+    }
+  ]
+}
